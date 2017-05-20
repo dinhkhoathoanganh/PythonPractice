@@ -11,6 +11,9 @@ def SeparateNum(inputfile):
 def FindMax(numlist):
     if len(numlist) == 1:
         return int(numlist[0])
+    elif len(numlist) == 0:
+        print('Emptylist!')
+        quit()
     else:
         maxnum = FindMax(numlist[1:])
         if maxnum > int(numlist[0]):
@@ -30,4 +33,4 @@ def main():
     #Print results
     print('Maximum number:', maxnum)
 
-main()
+main() 
